@@ -6,7 +6,7 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 162;
+    --hue: 20;
     --first-color: hsl(var(--hue), 100%, 40%);
     --first-color-alt: hsl(var(--hue), 56%, 35%);
     --title-color: hsl(0, 5%, 42%);
@@ -207,3 +207,102 @@ svg {
 .show-menu {
     right: 0;
 }
+
+/* Add blur to header */
+
+/* Active link */
+
+/* Tatiana Vladimirovna (TV) */
+.tv {
+    background-color: var(--container-color);
+}
+
+.tv__container {
+    padding-top: 2rem;
+    row-gap: 2.5rem;
+}
+
+.tv__content {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.tv__data {
+    text-align: center;
+}
+
+.tv__subtitle,
+.tv__position {
+    font-size: var(--first-color);
+}
+
+.tv__subtitle,
+.tv__title {
+    color: var(--first-color);
+}
+
+.tv__title {
+    font-size: var(--bigger-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.tv__description {
+    margin-block: 1rem 1.5rem;
+}
+
+.tv__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.tv__social-link {
+    display: flex;
+    background-color: var(--first-color-alt);
+    padding: 0.5rem;
+    color: var(--title-color);
+    font-size: 1.5rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.4s;
+}
+
+.tv__social-link:hover {
+    transform: translateY(-0.25rem);
+}
+
+.tv__image {
+    justify-self: center;
+}
+
+.tv__blob {
+    width: 320px;
+    fill: var(--first-color);
+    filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+}
+
+/* BUTTON TV */
+
+/* Natalia Sergeevna (NS) */
+
+/* BUTTIN NS */
+
+/* ABOUT SECTIONS */
+
+/* CONTACT */
+
+/* FOOTER */
+
+/* SCROLL BAR */
+
+/* SCROLL UP */
+
+/* Show Scroll Up */
+
+
+/* BREAKPOINTS */
+
+/* For small devices */
+
+/* For medium devices */
+
+/* For large devices */
