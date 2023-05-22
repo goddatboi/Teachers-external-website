@@ -213,6 +213,22 @@ svg {
 }
 
 /* Add blur to header */
+.blur-header {
+    background: transparent;
+}
+
+.blur-header::after {
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);  /* SAFARI */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 
 /* Active link */
 
@@ -301,7 +317,49 @@ svg {
 }
 
 /* Natalia Sergeevna (NS) */
+.ns__container {
+    row-gap: 2.5rem;
+}
 
+.ns__content {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.ns__data {
+    text-align: center;
+}
+
+.ns__subtitle,
+.ns__position {
+    font-size: var(--bigger-font-size);
+}
+
+.ns__subtitle span,
+.ns__title {
+    color: var(--first-color);
+}
+
+.ns__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.ns__description {
+    margin-block: 1rem 1.5rem;
+}
+
+.ns__image {
+    justify-self: center;
+}
+
+.ns__blob {
+    width: 320px;
+}
+
+.ns__blob path {
+    stroke: var(--first-color);
+}
 /* ABOUT SECTIONS */
 
 /* CONTACT */
