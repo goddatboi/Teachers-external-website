@@ -390,6 +390,64 @@ svg {
 .overview__card:hover {
     border: 2px solid var(--first-color);
 }
+
+/* PHOTOS */
+.photos {
+    background-color: var(--container-color);
+}
+
+.photos__container {
+    row-gap: 2rem;
+    justify-content: center;
+    padding-block: 1rem;
+}
+
+.photos__card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.photos__img {
+    width: 100%;
+    height: 100%;
+}
+
+.photos__modal {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+                            hsla(0, 0%, 0% , 0) 0%,
+                            hsla(var(--hue), 70%, 40%, 0.8) 120%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);  /* SAFARI */
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.4s;
+}
+
+.photos__subtitle {
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.photos__title {
+    font-size: var(--h2-font-size);
+    
+}
+
+.photos__card:hover .photos__modal {
+    bottom: 0;
+}
+
 /* CONTACT */
 
 /* FOOTER */
