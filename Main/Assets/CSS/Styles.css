@@ -16,11 +16,11 @@
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
-    --biggest-font-size: 2rem;
-    --bigger-font-size: 1.25rfem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
+    --biggest-font-size: 2.25rem;
+    --bigger-font-size: 1.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
     --normal-font-size: 0.938rem;
     --small-font-size: 0.813rem;
     --smaller-font-size: 0.75rem;
@@ -446,7 +446,50 @@ svg {
     bottom: 0;
 }
 
-/* CONTACTS */
+/* GUESTBOOK */
+.guestbook__container {
+    padding-top: 1rem;
+}
+
+.guestbook__form,
+.guestbook__group {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.guestbook__form {
+    position: relative;
+}
+
+.guestbook__input {
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: var(--container-color);
+    color: var(--title-color);
+}
+
+.guestbook__input::placeholder {
+    color: var(--text-color);
+}
+
+.guestbook__form textarea {
+    height: 11rem;
+    resize: none;
+    margin-bottom: 2rem;
+}
+
+.guestbook__button {
+    justify-self: center;
+    cursor: pointer;
+}
+
+.guestbook__message {
+    position: absolute;
+    left: 0;
+    bottom: 4.5rem;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
 
 /* FOOTER */
 
@@ -509,7 +552,8 @@ svg {
     .tv__container,
     .ns__container,
     .overview__container,
-    .photos__container {
+    .photos__container,
+    .guestbook__container {
         grid-template-columns: 360px;
         justify-content: center;
     }
@@ -558,7 +602,7 @@ svg {
     }
 
     .section__subtitle {
-        font-size: var(--normal-font-size);
+        font-size: var(--norma-font-size);
     }
 
     .nav {
@@ -627,7 +671,7 @@ svg {
     }
 
     .overview__container {
-        grid-template-columns: repeat(3, 352px);
+        grid-template-columns: repeat(2, 400px);
         padding-block: 2.5rem 4rem;
     }
 
@@ -639,6 +683,28 @@ svg {
         grid-template-columns: repeat(3, 350px);
         row-gap: 3rem;
         padding-block: 2.5rem 4rem;
+    }
+
+    .guestbook__container {
+        grid-template-columns: 680px;
+        padding-block: 2.5rem 2rem;
+    }
+
+    .guestbook__form {
+        row-gap: 1.5rem;
+    }
+
+    .guestbook__group {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+
+    .guestbook__input {
+        padding: 1.5rem;
+    }
+
+    .guestbook__form textarea {
+        height: 20rem;
     }
 
     .scrollup {

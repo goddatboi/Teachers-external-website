@@ -28,14 +28,6 @@
                     <li class="nav__item">
                         <a href="#tv" class="nav__link">Главная</a>
                     </li>
-                    
-                    <li class="nav__item">
-                        <a href="#Portfolio" class="nav__link">Портфолио</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#Guestbook" class="nav__link">Гостевая книга</a>
-                    </li>
 
                     <li class="nav__item">
                         <a href="#Documents" class="nav__link">Документы</a>
@@ -82,7 +74,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
 
-                        <a href="#contact" class="button">Обратная связь</a>
+                        <a href="#TVPortfolio" class="button">Портфолио</a>
                     </div>
 
                     <div class="tv__social">
@@ -152,7 +144,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </p>
 
-                        <a href="#contact" class="button">Обратная связь</a>
+                        <a href="#NSPortfolio" class="button">Портфолио</a>
                     </div>
 
                     <div class="ns__social">
@@ -208,7 +200,7 @@
             </div>
         </section>
 
-        <!-- ABOUT SECTIONS -->
+        <!-- OVERVIEW SECTIONS -->
         <section class="overview section" id="overview">
             <h3 class="section__subtitle">
                 Спектр <span>разделов
@@ -218,36 +210,12 @@
                 Обзор
             </h2>
 
-            <div class="overview__container container grid">
-                <article class="overview__card">
-                    <i class="ri-home-2-line overview__icon"></i>
-
-                    <h2 class="overview__title">
-                        Главная страница
-                    </h2>
-
-                    <p class="overview__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </article>
-                
+            <div class="overview__container container grid">              
                 <article class="overview__card">
                     <i class="ri-presentation-fill overview__icon"></i>
 
                     <h2 class="overview__title">
                         Портфолио
-                    </h2>
-
-                    <p class="overview__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </article>
-
-                <article class="overview__card">
-                    <i class="ri-contacts-book-2-line overview__icon"></i>
-
-                    <h2 class="overview__title">
-                        Гостевая книга
                     </h2>
 
                     <p class="overview__description">
@@ -305,7 +273,7 @@
 
             <div class="photos__container container grid">
                 <article class="photos__card">
-                    <img src="" alt="photos image" class="photos__img">
+                    <img src="/Assets/IMGs/overview-img-1.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -319,7 +287,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="" alt="photos image" class="photos__img">
+                    <img src="/Assets/IMGs/overview-img-2.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -333,7 +301,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="" alt="photos image" class="photos__img">
+                    <img src="/Assets/IMGs/overview-img-3.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -347,7 +315,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="" alt="photos image" class="photos__img">
+                    <img src="/Assets/IMGs/overview-img-4.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -361,7 +329,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="" alt="photos image" class="photos__img">
+                    <img src="/Assets/IMGs/overview-img-5.png" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -375,7 +343,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="" alt="photos image" class="photos__img">
+                    <img src="/Assets/IMGs/overview-img-6.jpeg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -387,6 +355,35 @@
                         </h2>
                     </div>
                 </article>
+            </div>
+
+        </section>
+
+        <!-- GUESTBOOK -->
+        <section class="guestbook section" id="guestbook">
+            <h3 class="section__subtitle">
+                Свяжись с <span>нами</span>
+            </h3>
+
+            <h2 class="section__title">
+                Гостевая книга
+            </h2>
+
+            <div class="guestbook__container container grid">
+                <form action="" class="guestbook__form" id="guestbook-form">
+                    <div class="guestbook__group">
+                        <input type="text" name="user__name" required placeholder="Введите Ваше имя" class="guestbook__input">
+                        <input type="email" name="user__email" required placeholder="Введите Вашу эл. почту" class="guestbook__input">
+                    </div>
+
+                    <textarea name="user__project" required placeholder="Введите Ваше сообщение" class="guestbook__input"></textarea>
+
+                    <p class="guestbook__message" id="guestbook-message"></p>
+
+                    <button type="submit" class="button guestbook__button">
+                        Отправить сообщение
+                    </button>
+                </form>
             </div>
 
         </section>
