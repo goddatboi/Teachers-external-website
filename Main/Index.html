@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/Assets/CSS/Styles.css">
+    <link rel="stylesheet" href="/Main/Assets/CSS/Styles.css">
 
     <title>Внешний сайт педагогов</title>
 
@@ -20,7 +20,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                Patrick Bateman
+                *Название или лого*
             </a>
 
             <div class="nav__menu" id="nav-menu">
@@ -273,7 +273,7 @@
 
             <div class="photos__container container grid">
                 <article class="photos__card">
-                    <img src="/Assets/IMGs/overview-img-1.jpg" alt="photos image" class="photos__img">
+                    <img src="/Main/Assets/IMGs/overview-img-1.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -287,7 +287,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="/Assets/IMGs/overview-img-2.jpg" alt="photos image" class="photos__img">
+                    <img src="/Main/Assets/IMGs/overview-img-2.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -301,7 +301,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="/Assets/IMGs/overview-img-3.jpg" alt="photos image" class="photos__img">
+                    <img src="/Main/Assets/IMGs/overview-img-3.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -315,7 +315,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="/Assets/IMGs/overview-img-4.jpg" alt="photos image" class="photos__img">
+                    <img src="/Main/Assets/IMGs/overview-img-4.jpg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -329,7 +329,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="/Assets/IMGs/overview-img-5.png" alt="photos image" class="photos__img">
+                    <img src="/Main/Assets/IMGs/overview-img-5.png" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -343,7 +343,7 @@
                 </article>
 
                 <article class="photos__card">
-                    <img src="/Assets/IMGs/overview-img-6.jpeg" alt="photos image" class="photos__img">
+                    <img src="/Main/Assets/IMGs/overview-img-6.jpeg" alt="photos image" class="photos__img">
 
                     <div class="photos__modal">
                         <span class="photos__subtitle">
@@ -372,11 +372,11 @@
             <div class="guestbook__container container grid">
                 <form action="" class="guestbook__form" id="guestbook-form">
                     <div class="guestbook__group">
-                        <input type="text" name="user__name" required placeholder="Введите Ваше имя" class="guestbook__input">
-                        <input type="email" name="user__email" required placeholder="Введите Вашу эл. почту" class="guestbook__input">
+                        <input type="text" name="user_name" required placeholder="Введите Ваше имя" class="guestbook__input">
+                        <input type="email" name="user_email" required placeholder="Введите Вашу эл. почту" class="guestbook__input">
                     </div>
 
-                    <textarea name="user__project" required placeholder="Введите Ваше сообщение" class="guestbook__input"></textarea>
+                    <textarea name="user_project" required placeholder="Введите Ваше сообщение" class="guestbook__input"></textarea>
 
                     <p class="guestbook__message" id="guestbook-message"></p>
 
@@ -389,11 +389,16 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
+
     <!-- SCROLL UP -->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-line"></i>
     </a>
+
+    <!-- EMAIL JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
-    <script src="/Assets/JS/Index.js"></script>
+    <script src="/Main/Assets/JS/Index.js"></script>
 </body>
 </html>

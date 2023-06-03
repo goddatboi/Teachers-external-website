@@ -46,3 +46,32 @@ const scrollUp = () =>{
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+// EMAIL JS
+const guestbookForm = document.getElementById('guestbook-form'),
+      guestbookMessage = document.getElementById('guestbook-message')
+
+const sendEmail = (e) => {
+    e.preventDefault()
+
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_e08zg9d', 'template_s1176ps', '#guestbook-form', 'swd1SRD6EaMmNiesa', 'wcymxhzsrzzcngha')
+        .then(() => {
+            // Show sent message
+            guestbookMessage.textContent = "Сообщение успешно отправлено ✅"
+
+            // Remove mtssage after five seconds
+            setTimeout(() => {
+                guestbookMessage.textContent = ''
+            }, 5000)
+
+            // Clear input fields
+            guestbookForm.reset()
+
+        }, () => {
+            // Show error message
+            guestbookMessage.textContent = "Сообщение не было отправлено (Ошибка сервера) ❌"
+        })
+}
+
+guestbookForm.addEventListener('submit', sendEmail)

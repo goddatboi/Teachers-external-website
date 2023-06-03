@@ -6,13 +6,13 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 20;
+    --hue: 4;
     --first-color: hsl(var(--hue), 100%, 40%);
     --first-color-alt: hsl(var(--hue), 56%, 35%);
-    --title-color: hsl(0, 0%, 39%);
-    --text-color: hsl(0, 0%, 5%);
-    --body-color: hsl(0, 0%, 100%);
-    --container-color: hsl(0, 0%, 56%);
+    --title-color: hsl(4, 77%, 61%);
+    --text-color: hsl(45, 2%, 55%);
+    --body-color: hsl(47, 25%, 89%);
+    --container-color: hsl(35, 40%, 75%);
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
@@ -602,7 +602,7 @@ svg {
     }
 
     .section__subtitle {
-        font-size: var(--norma-font-size);
+        font-size: var(--normal-font-size);
     }
 
     .nav {
@@ -705,6 +705,10 @@ svg {
 
     .guestbook__form textarea {
         height: 20rem;
+    }
+
+    .guestbook__message {
+        bottom: 6.5rem;
     }
 
     .scrollup {
