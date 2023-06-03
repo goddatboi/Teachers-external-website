@@ -360,8 +360,38 @@ svg {
 .qualification__button.qualification__active {
     color: var(--first-color);
 }
- 
 
+/* ACTIVITIES */
+.activities__container {
+    row-gap: 2rem;
+    padding-block: 1rem;
+}
+
+.activities__card {
+    text-align: center;
+    background-color: var(--container-color);
+    padding: 3rem 1.25rem;
+    border-radius: 1rem;
+    border: 2px solid var(--container-color);
+    transition: border 0.4s;
+}
+
+.activities__icon {
+    display: block;
+    font-size: 4rem;
+    color: var(--first-color);
+    margin-bottom: 0.75rem;
+}
+
+.activities__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.activities__card:hover {
+    border: 2px solid var(--first-color);
+}
+ 
 /* FOOTER */
 .footer {
     background-color: var(--container-color);
@@ -417,11 +447,16 @@ svg {
         margin-inline: 1rem;
     }
 
+    .activities__card {
+        padding-block: 1.5rem;
+    }
+
 }
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
-    .tv__container {
+    .tv__container,
+    .activities__container {
         grid-template-columns: 360px;
         justify-content: center;
     }
@@ -450,6 +485,10 @@ svg {
 
     .tv__blob {
         width: 400px;
+    }
+
+    .activities__container {
+        grid-template-columns: repeat(2, 352px);
     }
 }
 
@@ -512,6 +551,15 @@ svg {
 
     .tv__social {
         column-gap: 1.5rem;
+    }
+
+    .activities__container {
+        grid-template-columns: repeat(2, 400px);
+        padding-block: 2.5rem 4rem;
+    }
+
+    .activities__card {
+        padding: 3.5rem 2rem;
     }
 
     .scrollup {
