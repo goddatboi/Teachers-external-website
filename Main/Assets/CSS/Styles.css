@@ -492,6 +492,51 @@ svg {
 }
 
 /* FOOTER */
+.footer {
+    background-color: var(--container-color);
+    padding-block: 3.5rem 2rem;
+}
+
+.footer__container {
+    row-gap: 1.5rem;
+    text-align: center;
+}
+
+.footer__title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 0.25rem;
+}
+
+.footer__title span {
+    color: var(--first-color);
+}
+
+.footer__description {
+    font-size: var(--normal-font-size);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.footer__social-link {
+    display: flex;
+    padding: 0.5rem;
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    transition: transform 0.4s;
+}
+
+.footer__social-link:hover {
+    transform: translateY(0.25rem);
+}
+
+.footer__copy {
+    font-size: var(--small-font-size);
+}
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
@@ -545,6 +590,7 @@ svg {
     .overview__card {
         padding-block: 1.5rem;
     }
+
 }
 
 /* For medium devices */
@@ -556,6 +602,17 @@ svg {
     .guestbook__container {
         grid-template-columns: 360px;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 682px){
+    .footer__social {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__social-link {
+        display: block;
     }
 }
 
@@ -710,6 +767,29 @@ svg {
     .guestbook__message {
         bottom: 6.5rem;
     }
+
+    /* .footer {
+        padding-block: 4.5rem 4rem;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        text-align: initial;
+    }
+
+    .footer__title {
+        font-size: var(--bigger-font-size);
+    }
+
+    .footer__social {
+        column-gap: 1.5rem;
+    }
+
+    .footer__copy {
+        margin: 0;
+        justify-self: flex-end;
+    } */
 
     .scrollup {
         right: 3rem;
