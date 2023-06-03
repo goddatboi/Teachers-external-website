@@ -229,3 +229,226 @@ svg {
     left: 0;
     z-index: -1;
 }
+
+/* Tatiana Vladimirovna (TV) */
+.tv {
+    background-color: var(--container-color);
+}
+
+.tv__container {
+    padding-top: 2rem;
+    row-gap: 2.5rem;
+}
+
+.tv__content {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.tv__data {
+    text-align: center;
+}
+
+.tv__position {
+    margin-top: 10rem;
+}
+
+.tv__list dt {
+    float: left;
+    font-weight: var(--font-semi-bold);
+}
+
+.tv__list dd {
+    padding-left: 6.25rem;
+}
+
+.tv__list dd:not(:last-child) {
+    margin-bottom: 0.94rem;
+}
+
+.tv__subtitle,
+.tv__position {
+    font-size: var(--bigger-font-size);
+}
+
+.tv__subtitle span,
+.tv__title {
+    color: var(--first-color);
+}
+
+.tv__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.tv__description {
+    margin-block: 1rem 1.5rem;
+}
+
+.tv__image {
+    justify-self: center;
+}
+
+.tv__blob {
+    width: 320px;
+    fill: var(--first-color);
+    filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: var(--container-color);
+    padding-block: 3.5rem 2rem;
+}
+
+.footer__container {
+    row-gap: 1.5rem;
+    text-align: center;
+}
+
+.footer__title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 0.25rem;
+}
+
+.footer__title span {
+    color: var(--first-color);
+}
+
+.footer__description {
+    font-size: var(--normal-font-size);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+
+.footer__social-link {
+    display: flex;
+    padding: 0.5rem;
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    transition: transform 0.4s;
+}
+
+.footer__social-link:hover {
+    transform: translateY(0.25rem);
+}
+
+.footer__copy {
+    font-size: var(--small-font-size);
+}
+
+/* BREAKPOINTS */
+
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .tv__container {
+        grid-template-columns: 360px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 682px){
+    .footer__social {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__social-link {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav__menu {
+        width: 55%;
+    }
+
+    .tv__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .tv__blob {
+        width: 400px;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1023px) {
+    .section {
+        padding-block: 7rem, 2rem;
+    }
+
+    .section__subtitle {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav__close,
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .nav__menu {
+        width: initial;
+    }
+
+    .blur-header::after {
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);  /* SAFARI */
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container {
+        margin: auto;
+    }
+
+    .tv__container {
+        grid-template-columns: 455px 550px;
+        column-gap: 7rem;
+        padding-block: 2rem 3rem;
+    }
+
+    .tv__blob {
+        width: 550px;
+    }
+
+    .tv__content {
+        row-gap: 4.5rem;
+    }
+
+    .tv__description {
+        margin-block: 1.5rem 2.5rem;
+    }
+
+    .tv__social {
+        column-gap: 1.5rem;
+    }
+
+    .scrollup {
+        right: 3rem;
+    }
+}
