@@ -123,6 +123,7 @@ svg {
 
 .section__title {
     font-weight: var(--h1-font-size);
+    margin-bottom: 1.5rem;
 }
 
 .section__subtitle {
@@ -229,6 +230,22 @@ svg {
     z-index: -1;
 }
 
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    padding: 1rem 1.75rem;
+    border-radius: 0.5rem;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: box-shadow 0.4s;
+}
+
+.button:hover {
+    box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.25);
+}
+
 /* Tatiana Vladimirovna (TV) */
 .tv {
     background-color: var(--container-color);
@@ -292,6 +309,53 @@ svg {
     width: 320px;
     fill: var(--first-color);
     filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+}
+
+/* ABOUT */
+.about__container {
+    row-gap: 1rem;
+}
+
+.about__data {
+    text-align: center;
+}
+
+.about__description {
+    margin-bottom: 2rem;
+}
+
+.about__img {
+    width: 250px;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
+.about__information-title {
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+    margin-bottom: 1rem;
+}
+
+.about__information-data {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about__information-icon {
+    font-size: 1.5rem;
+    color: var(--first-color);
+    margin-right: 1rem;
+}
+
+.about__information-subtitle {
+    display: block;
+    font-weight: var(--font-semi-bold);
+}
+
+.about__information-subtitle-small {
+    font-size: var(--small-font-size);
 }
 
 /* QUALIFICATION */
@@ -439,6 +503,47 @@ svg {
     font-size: var(--small-font-size);
 }
 
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: hsl(228, 12%, 25%);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: hsl(228, 7%, 35%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(228, 8%, 45%);
+}
+
+/* SCROLL UP */
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background-color: var(--body-color);
+    padding: 6px;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    color: var(--first-color);
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px hsla(228, 15%, 8%, 0.4s);
+    z-index: var(--z-tooltip);
+    transition: bottom 0.4s, transform 0.4s;
+}
+
+.scrollup:hover {
+    transform: translateY(-0.25rem);
+}
+
+/* Show Scroll Up */
+.show-scroll {
+    bottom: 3rem;
+}
+
 /* BREAKPOINTS */
 
 /* For small devices */
@@ -451,6 +556,10 @@ svg {
         padding-block: 1.5rem;
     }
 
+    .qualification__data {
+        gap: 0.5rem;
+    }
+
 }
 
 /* For medium devices */
@@ -458,6 +567,12 @@ svg {
     .tv__container,
     .activities__container {
         grid-template-columns: 360px;
+        justify-content: center;
+    }
+
+    .qualification__sections {
+        display: grid;
+        grid-template-columns: 0.6fr;
         justify-content: center;
     }
 }
@@ -487,13 +602,46 @@ svg {
         width: 400px;
     }
 
+    .about__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__data {
+        text-align: initial;
+    }
+
+    .about__description {
+        margin-bottom: 2rem;
+    }
+
+    .about__information {
+        padding-left: 3rem;
+    }
+
+    .about__img {
+        display: block;
+        margin: auto;
+    }
+
     .activities__container {
         grid-template-columns: repeat(2, 352px);
+    }
+
+    .qualification__tabs {
+        justify-content: center;
+    }
+
+    .qualification__button {
+        margin: 0 1rem;
+    }
+
+    .qualification__sections {
+        grid-template-columns: 0.5fr;
     }
 }
 
 /* For large devices */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
     .section {
         padding-block: 7rem, 2rem;
     }
@@ -526,7 +674,7 @@ svg {
     }
 }
 
-@media screen and (min-width: 1152px) {
+@media screen and (min-width: 1175px) {
     .container {
         margin: auto;
     }
@@ -554,7 +702,7 @@ svg {
     }
 
     .activities__container {
-        grid-template-columns: repeat(2, 400px);
+        grid-template-columns: repeat(3, 365px);
         padding-block: 2.5rem 4rem;
     }
 
