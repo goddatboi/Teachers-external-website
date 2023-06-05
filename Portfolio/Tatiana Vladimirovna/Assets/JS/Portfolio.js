@@ -49,7 +49,7 @@ window.addEventListener('scroll', scrollUp)
 
 // QUALIFICATION TABS
 const tabs = document.querySelectorAll('[data-target]'),
-    tabContents = document.querySelectorAll('[data-content]')
+      tabContents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -60,10 +60,9 @@ tabs.forEach(tab => {
         })
         target.classList.add('qualification__active')
 
-        tab.forEach(tab => {
+        tabs.forEach(tab => {
             tab.classList.remove('qualification__active')
         })
         tab.classList.add('qualification__active')
-
     })
 })
