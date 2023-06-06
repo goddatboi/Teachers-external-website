@@ -6,13 +6,13 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 4;
-    --first-color: hsl(var(--hue), 100%, 40%);
+    --hue: 12;
+    --first-color: hsl(var(--hue), 100%, 50%);
     --first-color-alt: hsl(var(--hue), 56%, 35%);
-    --title-color: hsl(4, 77%, 61%);
-    --text-color: hsl(45, 2%, 55%);
+    --title-color: hsl(12, 85%, 57%);
+    --text-color: hsl(0, 0%, 24%);
     --body-color: hsl(47, 25%, 89%);
-    --container-color: hsl(35, 40%, 75%);
+    --container-color: hsl(26, 83%, 84%);
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
@@ -305,7 +305,7 @@ svg {
     background-color: var(--first-color);
     padding: 1rem 1.75rem;
     border-radius: 0.5rem;
-    color: var(--title-color);
+    color: var(--body-color);
     font-weight: var(--font-medium);
     transition: box-shadow 0.4s;
 }

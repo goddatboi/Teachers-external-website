@@ -37,3 +37,11 @@ const blurHeader = () =>{
                        : header.classList.remove('blur-header')
 }
 window.addEventListener('scroll', blurHeader)
+
+// FILTER
+// $(document).ready(function() {
+//     $('.filter-item').click(function() {
+//         const value = $(this).attr('data-filter')
+
+//     })
+// })
