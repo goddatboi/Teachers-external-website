@@ -6,13 +6,13 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 4;
-    --first-color: hsl(var(--hue), 100%, 40%);
+    --hue: 12;
+    --first-color: hsl(var(--hue), 100%, 50%);
     --first-color-alt: hsl(var(--hue), 56%, 35%);
-    --title-color: hsl(4, 77%, 61%);
-    --text-color: hsl(45, 2%, 55%);
+    --title-color: hsl(12, 85%, 57%);
+    --text-color: hsl(0, 0%, 24%);
     --body-color: hsl(47, 25%, 89%);
-    --container-color: hsl(35, 40%, 75%);
+    --container-color: hsl(26, 83%, 84%);
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
@@ -81,11 +81,12 @@ button {
 }
 
 h1,h2,h3,h4 {
-    color: var(--title-color);
+    color: var(--first-color);
     font-weight: var(--font-medium);
 }
 
-ul {
+ul,
+li {
     list-style: none;
 }
 
@@ -97,6 +98,10 @@ img,
 svg {
     max-width: 100%;
     height: auto;
+}
+
+section {
+    padding: 3rem 0 2rem;
 }
 
 /* REUSABLE CSS CLASSES */
@@ -230,6 +235,22 @@ svg {
     z-index: -1;
 }
 
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    padding: 1rem 1.75rem;
+    border-radius: 0.5rem;
+    color: var(--body-color);
+    font-weight: var(--font-medium);
+    transition: box-shadow 0.4s;
+}
+
+.button:hover {
+    box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.25);
+}
+
 /* HOME */
 .home {
     display: grid;
@@ -241,12 +262,18 @@ svg {
 }
 
 .home__text {
-    color: var(--text-color);
+    color: var(--first-color);
     text-align: center;
 }
 
 .home__title {
     font-size: 3.5rem;
+}
+
+.home__subtitle {
+    font-size: 1.25rem;
+    font-weight: var(--font-regular);
+    color: var(--title-color);
 }
 
 /* POST FILTER */
@@ -266,9 +293,9 @@ svg {
 
 .active-filter {
     background: var(--first-color);
-    color: var(--title-color);
-    padding: 0.25rem 0.6rem;
-    border-radius: 0.25rem;
+    color: var(--body-color);
+    padding: 4px 10px;
+    border-radius: 4px;
 }
 
 /* POSTS */
@@ -281,7 +308,7 @@ svg {
 
 .post__box {
     background: var(--container-color);
-    box-shadow: 0 4px 14px hsl(228, 7%, 35%);
+    box-shadow: 0 4px 14px hsl(15, 32%, 25%);
     padding: 1rem;
     border-radius: 0.5rem;
 }

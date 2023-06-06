@@ -39,9 +39,19 @@ const blurHeader = () =>{
 window.addEventListener('scroll', blurHeader)
 
 // FILTER
-// $(document).ready(function() {
-//     $('.filter-item').click(function() {
-//         const value = $(this).attr('data-filter')
-
-//     })
-// })
+$(document).ready(function() {
+    $('.filter-item').click(function() {
+        const value = $(this).attr('data-filter')
+        if (value == 'all') {
+            $('.post__box').show('1000')
+        }
+        else {
+            $('.post__box').not('.' + value).hide('1000')
+            $('.post__box').filter('.' + value).show('1000')
+        }
+    });
+    // Add active to button
+    $(".filter-item").click(function () {
+        $(this).addClass("active-filter").siblings().removeClass('active-filter');
+    })
+});
