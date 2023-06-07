@@ -37,3 +37,27 @@ const blurHeader = () =>{
                        : header.classList.remove('blur-header')
 }
 window.addEventListener('scroll', blurHeader)
+
+// DOCUMENTS MODAL
+const modalViews = document.querySelectorAll('.documents__modal'),
+      modalBtns = document.querySelectorAll('.documents__button'),
+      modalClose = document.querySelectorAll('.documents__modal-close')
+
+let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((mb, i) => {
+    mb.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalClose.forEach((mc) => {
+    mc.addEventListener('click', () => {
+        modalViews.forEach((mv) => {
+            mv.classList.remove('active-modal')
+        })
+    })
+})
+
