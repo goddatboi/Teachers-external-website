@@ -306,9 +306,12 @@ svg {
 }
 
 .ns__blob {
-    width: 320px;
+    width: 200px;
     fill: var(--first-color);
-    filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+}
+
+.ns__blob-img {
+    width: 170px;
 }
 
 /* ABOUT */
