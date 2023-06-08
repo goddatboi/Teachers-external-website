@@ -37,3 +37,23 @@ const blurHeader = () =>{
                        : header.classList.remove('blur-header')
 }
 window.addEventListener('scroll', blurHeader)
+
+// ACCORDION SUBJECTS
+const subjectsContent = document.getElementsByClassName('subjects__content'),
+      subjectsHeader = document.querySelectorAll('.subjects__header')
+
+function toggleSubjects() {
+    let itemClass = this.parentNode.className
+
+    for (i = 0; i < subjectsContent.length; i++){
+        subjectsContent[i].className = 'subjects__content subjects__close'
+    }
+
+    if (itemClass === 'subjects__content subjects__close'){
+        this.parentNode.className = 'subjects__content subjects__open'
+    }
+}
+
+subjectsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSubjects)
+})
