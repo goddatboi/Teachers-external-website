@@ -6,13 +6,19 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 12;
-    --first-color: hsl(var(--hue), 100%, 50%);
-    --first-color-alt: hsl(var(--hue), 56%, 35%);
-    --title-color: hsl(12, 85%, 57%);
-    --text-color: hsl(0, 0%, 24%);
-    --body-color: hsl(47, 25%, 89%);
-    --container-color: hsl(26, 83%, 84%);
+    --hue-color: 230;
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
@@ -301,14 +307,13 @@ svg {
     margin-block: 1rem 1.5rem;
 }
 
-.tv__image {
-    justify-self: center;
+.tv__blob {
+    width: 200px;
+    fill: var(--first-color);
 }
 
-.tv__blob {
-    width: 320px;
-    fill: var(--first-color);
-    filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+.tv__blob-img {
+    width: 170px;
 }
 
 /* ABOUT */
@@ -441,6 +446,7 @@ svg {
     background-color: var(--container-color);
     padding: 3rem 1.25rem;
     border-radius: 1rem;
+    box-shadow: 0 2px 4px;
     border: 2px solid var(--container-color);
     transition: border 0.4s;
 }

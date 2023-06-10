@@ -6,13 +6,19 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 12;
-    --first-color: hsl(var(--hue), 100%, 50%);
-    --first-color-alt: hsl(var(--hue), 56%, 35%);
-    --title-color: hsl(12, 85%, 57%);
-    --text-color: hsl(0, 0%, 24%);
-    --body-color: hsl(47, 25%, 89%);
-    --container-color: hsl(26, 83%, 84%);
+    --hue-color: 230;
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
@@ -308,14 +314,14 @@ section {
 
 .post__box {
     background: var(--container-color);
-    box-shadow: 0 4px 14px hsl(15, 32%, 25%);
-    padding: 1rem;
+    box-shadow: 0 4px 14px;
+    padding: 0.7rem;
     border-radius: 0.5rem;
 }
 
 .post__img {
     width: 100%;
-    height: 200px;
+    height: 230px;
     object-fit: cover;
     object-position: center;
     border-radius: 0.5rem;

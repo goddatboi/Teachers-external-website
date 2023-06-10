@@ -6,13 +6,19 @@
     --header-height: 3.5rem;
 
     /* Colors */
-    --hue: 12;
-    --first-color: hsl(var(--hue), 100%, 50%);
-    --first-color-alt: hsl(var(--hue), 56%, 35%);
-    --title-color: hsl(12, 85%, 57%);
-    --text-color: hsl(0, 0%, 24%);
-    --body-color: hsl(47, 25%, 89%);
-    --container-color: hsl(26, 83%, 84%);
+    --hue-color: 230;
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
     /* Font and typography */
     --body-font: "Open Sans", sans-serif;
@@ -111,7 +117,7 @@ svg {
 }
 
 .section {
-    padding-block: 5rem 2rem;
+    padding-block: 4rem 2rem;
 }
 
 .section__title,
@@ -153,12 +159,8 @@ svg {
 }
 
 .nav__logo {
-    color: var(--title-color);
-    font-weight: var(--font-medium);
-}
-
-.nav__logo span {
-    color: var(--first-color);
+    width: 65px;
+    height: 70px;
 }
 
 .nav__toggle,
@@ -193,7 +195,7 @@ svg {
 
 .nav__link {
     color: var(--title-color);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-semi-bold);
     transition: color 0.4s;
 }
 
@@ -369,6 +371,7 @@ svg {
     background-color: var(--container-color);
     padding: 3rem 1.25rem;
     border-radius: 1rem;
+    box-shadow: 0 2px 4px;
     border: 2px solid var(--container-color);
     transition: border 0.4s;
 }
@@ -464,7 +467,7 @@ svg {
 .guestbook__input {
     padding: 1rem 1.25rem;
     border-radius: 0.5rem;
-    background-color: var(--container-color);
+    background-color: var(--input-color);
     color: var(--title-color);
 }
 
@@ -493,7 +496,7 @@ svg {
 
 /* FOOTER */
 .footer {
-    background-color: var(--container-color);
+    background-color: var(--first-color-second);
     padding-block: 3.5rem 2rem;
 }
 
@@ -536,6 +539,14 @@ svg {
 
 .footer__copy {
     font-size: var(--small-font-size);
+}
+
+.footer__title,
+.footer__description,
+.footer__social-link,
+.footer__hull,
+.footer__copy {
+    color: white;
 }
 
 /* SCROLL BAR */
@@ -648,7 +659,7 @@ svg {
 
     .overview__container,
     .photos__container {
-        grid-template-columns: repeat(2, 352px);
+        grid-template-columns: repeat(2, 400px);
     }
 }
 
@@ -728,7 +739,7 @@ svg {
     }
 
     .overview__container {
-        grid-template-columns: repeat(2, 400px);
+        grid-template-columns: repeat(2, 450px);
         padding-block: 2.5rem 4rem;
     }
 
@@ -767,29 +778,6 @@ svg {
     .guestbook__message {
         bottom: 6.5rem;
     }
-
-    /* .footer {
-        padding-block: 4.5rem 4rem;
-    }
-
-    .footer__container {
-        grid-template-columns: repeat(4, 1fr);
-        align-items: center;
-        text-align: initial;
-    }
-
-    .footer__title {
-        font-size: var(--bigger-font-size);
-    }
-
-    .footer__social {
-        column-gap: 1.5rem;
-    }
-
-    .footer__copy {
-        margin: 0;
-        justify-self: flex-end;
-    } */
 
     .scrollup {
         right: 3rem;
